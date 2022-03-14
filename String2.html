@@ -1,0 +1,59 @@
+<!-- 
+
+	big() : 한단계크게 <big>
+	small() : 한단계작게 <small>
+	bold() : 굵게	<b>
+	italics() : 이태릭체 <i>
+	strike() : 가운데 줄 <strike>
+	sub() : 아래첨자 <sub>
+	sup() : 위첨자 <sup>
+	
+	fontcolor(색) <font color>
+	fontsize(크기) <font size> : 1~7지정되어있다.
+	
+	anchor(이름) <<< link(이름)
+	
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	document.write("<h3><p>"+"(1)String객체의 length속성".anchor("list1")+"</p></h3>");
+	
+	document.write("<br> [1] 한글 => ","자바스크립트".length);
+	document.write("<br> [2] 영문 => ","JavaScript".length);
+	
+	document.write("<p>String객체의 위치이동 관련 메소드".link("Array1.html")+"</p>");
+	
+	var str = "자바스크립트(JavaScript)";
+	for(i=0; i<str.length;i++){
+		document.write(i+"<br>");		
+	}
+	
+	document.write("<hr><h3><p> (2)String객체의 글꼴 관련 메소드".anchor("list2")+"</p></h3>");
+	document.write("<br> [1] big() => "+str.big());
+	document.write("<br> [2] small() => " + str.small());
+	document.write("<br> [3] bord() => " + str.bold().fontcolor('red'));
+	document.write("<br> [4] fontsize() => " + str.fontsize(7));
+	
+	for(i=0; i<str.length;i++){
+		document.write(i+"<br>");		
+	}
+	
+	document.write("<hr><h3><p> (3)String객체의 위치 이동 메소드".anchor("list3")+"</p></h3>");
+	document.write("<p>String객체의 속성 알아보기".link('#list1'));
+	document.write("<p>String객체의 글꼴 관련 메소드를 알아보기".link('#list2'));
+	document.write("<p>link메소드".link('http://www.naver.com'));
+	
+	
+</script>
+</head>
+<body>
+	<hr>
+	<h3></h3>
+</body>
+</html>

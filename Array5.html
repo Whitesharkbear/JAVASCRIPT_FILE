@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var landAnimal = new Array("호랑이","사자","표범");
+	var seaAnimal = new Array("참치","고래");
+	
+	document.write("<h4>join() : " + landAnimal.join('>')+"</h4>");
+	document.write("<h4>reverse() : " + landAnimal.reverse()+"</h4>");
+	document.write("<h4>reverse().join() : " + landAnimal.reverse().join(">")+"</h4>");
+	document.write("<h4>concat() : " + seaAnimal.concat(landAnimal)+"</h4>");
+	document.write("<h4>concat().join() : " + seaAnimal.concat(landAnimal).join("->")+"</h4>");
+	var animal = seaAnimal.concat(landAnimal);
+	document.write("<h4>sort() : " + animal.sort()+"</h4>");
+	document.write("<h4>sort().join() : " + animal.sort().join("->")+"</h4>");
+	document.write("<h4>slice() : " + animal.slice(1,3)+"</h4>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

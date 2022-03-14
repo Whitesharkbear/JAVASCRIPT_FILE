@@ -1,0 +1,60 @@
+<!-- 
+
+	getTime() : 1970. 1. 1 00:00:00부터 현재까지 경과한 시간을 1/1000초 단위로 된 값 반환
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var date = new Date();
+	
+	document.write("<p><strong>현재 날짜/시간: ");
+	document.write("[" + date.getFullYear()+"년"); //4자리 년도, 브라우저에 따라 1900 더해줘야할 수도 있다.
+	document.write((date.getMonth()+1)+"월");	// 0~11사이로 출력
+	document.write(date.getDate()+"일");		// 1~31일의 일자로 출력
+	
+	
+	switch (date.getDay()) { //요일 - 0: 일요일
+	
+	case 0: document.write("&nbsp; 일요일 &nbsp;".fontsize(7).fontcolor("red"));
+		break;
+	case 1: document.write("&nbsp; 월요일 &nbsp;".fontsize(7).fontcolor("orange"));
+		break;
+	case 2: document.write("&nbsp; 화요일 &nbsp;".fontsize(7).fontcolor("yellow"));
+		break;
+	case 3: document.write("&nbsp; 수요일 &nbsp;".fontsize(7).fontcolor("green"));
+		break;
+	case 4: document.write("&nbsp; 목요일 &nbsp;".fontsize(7).fontcolor("blue"));
+		break;
+	case 5: document.write("&nbsp; 금요일 &nbsp;".fontsize(7).fontcolor("dakrblue"));
+		break;
+	case 6: document.write("&nbsp; 토요일 &nbsp;".fontsize(7).fontcolor("purple"));
+		break;
+		
+	}
+	
+	if(date.getHours()>12){ // 0~23시 출력
+		document.write("오후");
+		document.write((date.getHours()-12)+"시").fontsize(6).fontcolor("red");
+	}else{
+		document.write("오전");
+		document.write((date.getHours().toString().fontsize(6)+"시").fontcolor("red"));
+	}
+
+	document.write(date.getMinutes()+"분");
+	document.write(date.getSeconds()+"초");
+	
+	document.write("]</strong></p>");
+	
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

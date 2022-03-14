@@ -1,0 +1,35 @@
+<!-- 
+
+	방문시간에 따라 배경색을 변경해보기
+		짝수 초 : violet
+		홀수 초 : lightsky 로 지정
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>방문초시간에 따라 배경색 변경</h3>
+<hr>
+
+<script type="text/javascript">
+
+	var current = new Data();
+	if(current.getSeconds()%2 == 0){
+		document.body.style.backgroundColor="violet";
+	}else{
+		document.body.style.backgroundColor="lightskyblue";
+	}
+	document.write("현재시간 : ");
+	document.write(date.getHours()+"시");
+	document.write(date.getMinutes()+"분");
+	document.write(date.getSeconds()+"초");
+	
+</script>
+
+</body>
+</html>

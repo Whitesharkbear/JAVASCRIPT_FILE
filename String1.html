@@ -1,0 +1,64 @@
+<!-- 
+
+	String객체
+		. 문자열을 다루는데 가장 많이 사용되는 객체이다.
+		. 일단 생성된 문자열은 수정이 불가하다.
+		. []연산자에 인덱스를 활용해서 각각의 문자에 접근할 수 있다.
+		. 길이 : length 프로퍼티 활용
+		
+		. 메소드
+			- charAt(index) : 해당하는 인덱스의 문자값을 반환.
+			- charCodeAt(index) : 인덱스에 있는 문자의 유니코드.
+			- concat(s1,s2,,) : 현재 문자열 뒤에 s1,s2 .. 새로운 문자열을 리턴.
+			- indexOf(s) : s가 처음 나타내는 index를 반환.
+			- replace(a,b) : a를 찾아서 b로 변경한 새로운 문자열 리턴.
+			- slice(indexA,indexB) : A~B-1까지 문자열을 리턴.
+			- substr(index,len) : 인덱스에서부터 len개수만큼 새로운 문자열 리턴
+			- substring(index!,indexB) : A~B-1까지 문자열ㅇ르 리턴
+			- trim() : 공백문자를 없애준다.
+			- toLowerCase()
+			- toUpperCase()
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>String 객체활용</h3>
+	<hr>
+	<script type="text/javascript">
+	
+		var a = new String("Boys and Girls");
+		var b = "!!!";
+		
+		document.write("a : "+ a + "<br>");
+		document.write("b : "+ b + "<br>");
+		
+		document.write("a의 첫번째 문자 : "+ a.charAt(0)+"<br>");
+		document.write("a와 b의 결합 : " + a.concat(b,"입니다 <br>"));
+		
+		document.write("a에서 첫번째 s문자 인덱스 : " + a.indexOf('s')+"<br>");
+		document.write("a에서 5~7까지 인덱스 : " + a.slice(5,8)+"<br>");
+		
+		document.write("인덱스 5부터 3개 : " + a.substr(5,3)+"<br>");
+		document.write("a를 모두 대문자 : " + a.toUpperCase()+"<br>");
+		document.write("and를 or 로 대체 " + a.replace('and','or')+"<br>");
+		
+		document.write("			javascript			".trim()+"<br>");
+		
+		var sub = a.split(" "); //공백을 기준으로 >> 배열로 저장해준다.
+		document.write("a를 빈칸으로 분리<" +  sub + "<br>"); // 문자열로 출력
+		for(i=0; i<sub.length; i++){
+			document.write("sub" + i + "=" + sub[i]+"<br>");
+		}
+		document.write("a : " + a +"<br>");
+	
+	</script>
+
+</body>
+</html>

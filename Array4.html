@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var score = new Array(), season = new Array('봄', '여름', '가을', '겨울');
+	var subject = 'java'; 
+	
+	score["web"] = 75;
+	score[subject] = 92;
+	score["project"] = 85;
+	
+	document.write("score 배열 : " + score + "<br>");
+	document.write("season 배열 : " + season + "<br>");
+	document.write("score의 web : " + score['web']+"<br>");
+	document.write("score의 web : " + score[subject]+"<br>");
+	document.write("score의 web : " + score['project']+"<br>");
+	
+	for(i=0; i<score.length; i++){
+		document.write(score[i]+"<br>");
+	}
+	/*for~ in*/
+	for(var key in score){
+		document.write(score[key]+"<br>");
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

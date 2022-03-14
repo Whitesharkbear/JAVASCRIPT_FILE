@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function evenOdd() {
+		var sum = 0;
+		var n = 0;
+		var r;
+		
+		while ((r=prompt("숫자를 입력해주세요",""))!=0) {
+			sum = sum + eval(r);
+			n++;
+		}
+		return sum/n;
+		
+	}
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+	document.write("입력한 숫자의 평균은" + evenOdd()+"입니다");
+	</script>
+</body>
+</html>
