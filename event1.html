@@ -1,0 +1,51 @@
+<!-- 
+
+	. 이벤트
+		- 입력행위, 문서의 변화
+		- 브라우저가 이벤트객체를 만들어서 이벤트리스너에게 전달
+	
+	. 종류
+		- onclick
+		- ondblclick
+		- onload : 문서나 이미지가 로딩이 완료된 다음
+		- onabort : " 중단되었을때
+		- onresize : 윈도우 창의 크기가 변화할때
+		- onfocus : 
+		- onblur : 포커스를 잃을때 
+		- onchange : input, select, textarea 등에서 선택내용이 변하거나, 체크상태변화시.
+		- onreset 
+		- onsumit
+		- onkeydown : 아무키나 누르는 순간
+		- onkeypress : 문자숫자키를 누르는 순간
+		- onmousedown
+		- onmouseenter
+		- onmousemove : 움직일때
+		- onwheel
+		- onmouseup
+		- onselect : 입력된 텍스트를 마우스로 선택할때 
+		
+	. 이벤트구현
+		- HTML태그 안에 직접 박성
+		- DOM객체의 이벤트리스너 프로퍼티에 작성
+		- addEventListener()이용해서 작성
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>HTML 태그안에서 직접작성</title>
+</head>
+<body>
+
+	<p onmouseover="this.style.backgroundColor='orange'"
+	   onmouseout="this.style.backgroundColor='white'; this.style.fontSize = '15px'"
+	   onwheel="body.style.backgroundColor='yellow'"
+	   ondblclick="this.style.fontSize='30px'">
+		마우스를 올리면 orange 색으로 변하고, 벗어나면 white색으로 변합니다.
+	
+	</p>
+
+</body>
+</html>

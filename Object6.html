@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 프로토타입 함수 작성
+	function Account(name, code, balance) {
+		this.owner = name;
+		this.code = code;
+		this.balance = balance;
+		
+		this.inquiry = function a(){
+			return this.balance;
+		}
+		this.deposit = function (money){this.balance += money;}
+		this.withdraw = function (money){this.balance -= money;}
+	}
+
+</script>
+</head>
+<body>
+	<h3>프로토타입으로 객체 만들기</h3>
+	<hr>
+	<script type="text/javascript">
+	
+		//객체생성
+		var account = new Account("홍길동","111",35000);
+		
+		//출력
+		document.write("예금주 : " + account.owner + "<br>");
+		document.write("계좌번호 : " + account.code+"<br>");
+		document.write("잔액 : " + account.balance + "<br>");
+		
+		account.deposit(10000);
+ 		document.write("현재 잔액 : " + account.inquiry()+ "<br>");
+ 		
+ 		account.withdraw(35000);
+ 		document.write("현재 잔액 : " + account.inquiry()+ "<br>");
+	
+	</script>
+</body>
+</html>

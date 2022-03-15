@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	추천여행지 : <input id="t1" type="text">
+	<button type="button" onclick="listPlace1()">국내</button>
+	<button type="button" onclick="listPlace2()">국외</button>
+	<div id = "d1">
+		<div>1. 국내여행지</div>
+		<div id="d2">2. 국외여행지</div>
+	</div>
+	<script type="text/javascript">
+	
+		//국내여행
+		function listPlace1() {
+			var tag1 = document.getElementById("t1");
+			var tag2 = document.getElementById("d1");
+			var tag3 = document.getElementById("d2");
+			
+			var newTag = document.createElement('div');
+			var txtNode = document.createTextNode(tag1.value);
+			
+			newTag.appendChild(txtNode);
+			newTag.style.color = "blue";
+			
+			tag2.insertBefore(newTag,tag3);
+			tag1.value="";
+			
+		}
+		
+		//해외여행
+		function listPlace2() {
+			var tag4 = document.getElementById("t1");
+			var tag5 = document.getElementById("d1");
+			var tag6 = document.getElementById("d2");
+			
+			var newTag1 = document.createElement('d2');
+			var txtNode1 = document.createTextNode(tag4.value);
+			
+			newTag1.appendChild(txtNode1);
+			newTag1.style.color = "blue";
+			
+			tag5.insertBefore(newTag1,tag6);
+			tag4.value="";
+		}
+	
+	</script>
+	
+</body>
+</html>

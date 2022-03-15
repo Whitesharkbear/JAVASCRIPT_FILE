@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		function change() {
+			
+			var spanArray = document.getElementsByTagName("span");
+			
+			for(i=0; i<spanArray.length; i++){
+				var span = spanArray[i];
+				span.style.color = 'orchid';
+				span.style.fontSize = '20px';
+				
+			}
+			
+		}
+		
+</script>
+</head>
+<body>
+	<h3>내가 제일 좋아하는 과일은</h3>
+	<button type="button" onclick="change()">눌러주세요!</button>
+	<hr>
+	저는 빨간 <span>사과</span>를 좋아함<br>
+	<span>바나나</span>도 좋아함 <br>
+	<span>체리</span>는 별로임.<br>
+	<span>자두</span>는 좋아함.
+</body>
+</html>

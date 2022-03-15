@@ -1,0 +1,42 @@
+<!-- 
+
+	this : 객체 자신
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function change(obj,size,color){
+		
+		obj.style.color = color;
+		/* obj.style.cssText = "font-size:"+size;*/
+		obj.style.fontSize = size;
+		
+	}
+
+</script>
+<style type="text/css">
+
+	p{
+		background-color: orange;
+	}
+
+</style>
+</head>
+<body>
+	<h4>this 활용</h4>
+	<Hr>
+	<button onclick="change(this,'30px','red')">red버튼</button>
+	<button onclick="change(this,'30px','blue')">blue버튼</button>
+	<button onclick="change(this,'30px','orange')">색상변경</button>
+	
+	
+	<p onclick="this.style.backgroundColor = 'orange'">스타일을 태그안에서 인라인 방식으로 이벤트 스타일을 지정할 수도 있습니다.</p>
+	
+</body>
+</html>

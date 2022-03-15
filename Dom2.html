@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p id = 't1' style="color: blue">이것은 
+		<span style="color: red">문장입니다.</span>
+	</p>
+	<form id='t2' action="">
+		<input type="text">
+		<input type="button" value="테스트" onclick=f()>
+		<hr>
+	</form>
+	<script type="text/javascript">
+	
+		function f() {
+			var p = document.getElementById("t1");
+			var s = p.firstElementChild;
+			var b = p.parentElement;
+			
+			document.write("태그이름 : " + p.tagName+"<br>");
+			document.write("첫번째자식 : " + s + "<br>");
+			document.write("부모 : " + b + "<br>");
+			
+		}
+	
+	</script>
+
+</body>
+</html>

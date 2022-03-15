@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		function change() {
+
+			var spanArr = document.getElementsByClassName("a");
+			for(i=0; i<spanArr.length; i++){
+				var span = spanArr[i];
+				span.style.color = 'skyblue';
+				span.style.FontSize='30px', 'border';
+			}
+		}
+		
+</script>
+</head>
+<body>
+	<h3>내가 제일 좋아하는 과일은</h3>
+	<button type="button" onclick="change()">눌러주세요!</button>
+	<hr>
+	저는 빨간 <span class="a">사과</span>를 좋아함<br>
+	<span class="a">바나나</span>도 좋아함 <br>
+	<span class="a">체리</span>는 별로임.<br>
+	<span class="a">자두</span>는 좋아함.
+</body>
+</html>

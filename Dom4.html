@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>DOM객체 p의 프로퍼티, 스타일, 이벤트, 이벤트리스너 출력</h3>
+	<hr>
+	<p id="fitstp" style="color: green; background-color: yellow;" onclick="this.style.color='teal'" >
+	 이것은 <span style="color: red;">문장입니다.</span>
+	</p>
+	<script type="text/javascript">
+	
+		var p = document.getElementById("firstP");
+		var text = p.Id+"\n";
+		text += "p.tagName = "+p.tagName+"\n";
+		text += "p.innerHTML = " + p.innerHTML + "\n";
+		text += "p.style.color = " + p.style.color + "\n";
+		text += "p.onclick = " + p.onclick + "\n";
+		text += "p.childElementCount = " + p.childElementCount + "\n";
+		text += "너  비 = " + p.offsetWidth + "\n";
+		text += "높  이 = " + p.offsetHeight + "\n";
+	
+		
+		alert(text);
+		
+	</script>
+</body>
+</html>

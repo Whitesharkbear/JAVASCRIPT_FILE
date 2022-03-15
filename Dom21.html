@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>버튼을 클릭하면 사진이 추가됩니다.</h3>
+	<hr>
+	<button type="button" onclick="insertImg1()">사진1</button>
+	<button type="button" onclick="insertImg2()">사진2</button>
+	<button type="button" onclick="insertImg3()">사진3</button>
+	<br><br>
+	<div id="d"></div>
+	<hr>
+	<script type="text/javascript">
+	
+		function insertImg1() {
+			
+				var tag = document.getElementById('d');
+				var newTag = document.createElement('img');
+				newTag.setAttribute('src','image/coal.jpg');
+				newTag.setAttribute('width','100px');
+				newTag.setAttribute('height','80px');
+				
+				tag.appendChild(newTag);
+			
+		}
+	
+	</script>
+	
+</body>
+</html>

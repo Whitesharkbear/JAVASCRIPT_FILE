@@ -1,0 +1,57 @@
+<!-- 
+
+	createElement() : 요소만들기
+	createTextNode() : 텍스트만들기
+	appendChild() : 자식추가
+	insertChild() : 특정한 장소에 자식추가
+	replaceChuld() : 자식대체
+	removeChild() : 자식제거
+	setAttribute() : 속성세팅
+	getAttribite() : 속성추가
+	
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function createDIV() {
+		
+		var obj = document.getElementById("parent");
+		
+		var newDIV = document.createElement("div");
+		newDIV.innerHTML = "새로 생성된 DIV입니다.";
+		newDIV.setAttribute("id","myDIV");
+		newDIV.style.backgroundColor="yellow";
+		newDIV.style.fontSize="20px";
+		newDIV.style.fontWeight="border";
+		
+		obj.appendChild(newDIV);
+		
+		newDIV.addEventListener("click",
+			function () {
+				var p = this.parentElement;
+				p.removeChild(this);
+			}		
+		);
+		
+	}
+
+</script>
+</head>
+<body id="parent">
+	<h4>div객체를 동적으로 생성, 삽입, 삭제 해보기</h4>
+	<hr>
+	<p>
+		DOM트리에 동적으로 객체를 삽입할 수 있다.<br>
+		해당하는 메소드를 적절히 사용하여 문서를 동적으로<br>
+		변경시킬 수 있다.
+	</p>
+	<a href="javascript:createDIV()">DIV 생성</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function changeContent() {
+		var ptag = document.getElementById("p1");
+		var text = "지금까지 HTML/CSS/자바스트립트 기본을 학습하였습니다";
+		text += "<br><hr>";
+		text += "<img src='image/2card.png' width = 500 height = 400><hr>"
+		text += "<p>즐겁게 열심히 합시다! 그래도 졸려~</p>"
+		
+		ptag.innerHTML = text;
+	}
+
+</script>
+</head>
+<body>
+	<h2>자바스크립트로 이미지 변경해보기</h2>
+	<button id="b1" onclick="changeOn()">사진1</button>
+	<img id="light" src="image/2card.png" style="width: 70px">
+	<button id="b2" onclick="changeOff()">사진2</button>
+	<script type="text/javascript">
+	
+		function changeOn() {
+			var tag1 = document.getElementById("light");
+			tag1.src="image/pine.png";
+		}
+		function changeOff() {
+			var tag2 = document.getElementById("light");
+			tag2.src="image/grape.png";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- 
+
+	사용자 객체 : 사용자가 작성한 객체
+	구현방법 : 
+		- Object() - 싱글톤방식 (new x)
+		- 리터럴표기법 - 싱글톤방식 (new x)
+		- 프로토타입
+			- 속성(멤버변수)
+			- 메소드(프로토타입 함수)
+		- 구현 :
+			- 프로토타입 함수 작성해놓는다.
+			- 속성에 this를 붙여서 선언한다.
+				>> 붙이지 않으면 전역변수일 뿐이다.
+			- 메소드에 this를 붙여서 선언한다.
+		- 활용 :
+			- var v = new 생성자();
+			
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var person = new Object();
+	person.name="조우진";
+	person.nickName="X-man";
+	person.age=24;
+	person.major="자바스크립트";
+
+</script>
+</head>
+<body>
+	<h3>Object()활용생성한 객체활용</h3>
+	<hr>
+	<script type="text/javascript">
+		document.write("이름 : " + person.name+"<br>");
+		document.write("나이 : " + person.age+"<br>");
+		document.write("별명 : " + person.nickName+"<br>");
+		document.write("전공 : " + person.major+"<br>");
+	</script>
+</body>
+</html>

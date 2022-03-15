@@ -1,0 +1,22 @@
+<!-- 
+
+	write주의점
+		. document 객체가 닫히고 나면 추가하기 위해 write()를 사용하지 못한다.
+		. 닫히고 난 다음에 write()를 사용하면 현재의 문서 개체들은 모두 지워지고,
+		  write()로 작성하는 내용만 새로 출력된다.
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body onclick="document.write('<h3>클릭되었습니다. write()의 내용이 이어져서 출력되었나요?</h3>')">
+	<h3>document.write()를 잘못 사용하는 사례</h3>
+	<hr>
+	<p>웹 브라우저의 제목줄 공간을 클릭해보세요</p>
+	
+</body>
+</html>

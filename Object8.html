@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function ComFactory(cpu, ram, hdd) {
+		this.cpu = cpu;
+		this.ram = ram;
+		this.hdd = hdd;
+		
+		this.toInfo = function() {
+			document.write("제조업체 : 한국전자 <br>");
+			document.write("시스템종류 : 64비트 운영체제");
+		}
+		
+	}
+	var speedCom = new ComFactory("2.8GHZ", "2.0GB", "1TB");
+	document.write(speedCom.cpu + "<br>");
+	document.write(speedCom.ram + "<br>");
+	document.write(speedCom.hdd + "<br>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

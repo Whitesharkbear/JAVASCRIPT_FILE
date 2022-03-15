@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var account = new Object();
+	
+		// 프로퍼트
+		account.owner = "홍길동";
+		account.code = "1111";
+		account.balance = 35000;
+
+		// 메소드
+		account.inquiry = inquiry; // 잔액조회
+		account.deposit = deposit; // 입금
+		account.widthdraw = function w(money){ //출금
+			account.balance = account.balance - money;
+		}
+		
+		function inquiry(){
+			return this.balance;
+		}
+		function deposit(money){
+			this.balance += money;
+		}
+			
+</script>
+</head>
+<body>
+	<h3>Object()로 생성한 객체활용</h3>
+	<hr>
+	<script type="text/javascript">
+	
+		document.write("account 프로퍼티 ... <br>");
+		document.write("예금주 : " + account.owner + "<br>");
+		document.write("통장번호 : " + account.code + "<br>");
+		document.write("잔액 : " + account.balance + "<br>");
+		
+		//입금
+		account.deposit(10000);
+		document.write("1만원 저축 후 잔액 : " + account.inquiry() + "<br>");
+		
+		//출금
+		account.withdraw(5000);
+		document.write("5천원 출금 후 잔액 : " + account.inquiry() + "<br>");
+		
+	
+	</script>
+</body>
+</html>

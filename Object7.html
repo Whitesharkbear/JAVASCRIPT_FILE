@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function Student(n,dept,grade) {
+		this.name = n; //지역변수
+		this.dept = dept; //지역변수
+		this.grade = grade; //지역변수
+		
+		phone = "010-1111-2222"; //전역변수
+		
+	}
+
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var s1 = new Student("홍길동","컴퓨터학과",2);
+		var s2 = new Student("이순신","건축학과",1);
+		
+		document.write(s1.name + "은" + s1.dept + "학과" + s1.grade + "학년학생입니다.<br>");
+		document.write(s2.name + "은" + s2.dept + "학과" + s2.grade + "학년학생입니다.<br>");
+		document.write(s2.name + "은" + s2.dept + "학과" + s2.grade + "학년학생입니다. 전화번호는 "+phone+"<br>");
+		
+		document.write(phone+"<br>");
+	
+	</script>
+</body>
+</html>
